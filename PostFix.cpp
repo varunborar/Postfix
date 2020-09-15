@@ -114,12 +114,22 @@ void PostFix ::convertExpression()
 int main()
 {
     PostFix P1;
-    P1.getExpression("A*(B-C)");
+    string expression;
+    cout << "\nEnter the expression :";
+    cin >> expression;
+    P1.getExpression(expression);
     
     if(P1.checkInpExpression() == 1)
     {
         P1.convertExpression();
         P1.postfixExp();
+        cout << endl;
     }
+    else
+    {
+        cout << "\nInvalid Expression";
+    }
+    system("pause");
+    
     return 0;
 }
